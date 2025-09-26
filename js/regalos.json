@@ -1,8 +1,8 @@
 [
-  {"id":1,"nombre":"Viaje a Disney","descripcion":"Un viaje completo a Disney con entrada y alojamiento","precio":500000},
-  {"id":2,"nombre":"Heladera","descripcion":"Heladera con freezer y eficiencia energética","precio":150000},
-  {"id":3,"nombre":"Microondas","descripcion":"Microondas con grill y varias funciones","precio":25000},
-  {"id":4,"nombre":"Vajilla","descripcion":"Juego de vajilla de 12 piezas","precio":12000},
-  {"id":5,"nombre":"Smart TV","descripcion":"Televisor 55\" 4K HDR","precio":200000},
-  {"id":6,"nombre":"Auriculares","descripcion":"Auriculares inalámbricos con cancelación de ruido","precio":35000}
+  {"id":1,"nombre":"Viaje a Disney","descripcion":"Un viaje completo a Disney con entrada y alojamiento","precio":5.000.000},
+  {"id":2,"nombre":"Heladera","descripcion":"Heladera con freezer y eficiencia energética","precio":850,000},
+  {"id":3,"nombre":"Microondas","descripcion":"Microondas con grill y varias funciones","precio":250.000},
+  {"id":4,"nombre":"Vajilla","descripcion":"Juego de vajilla de 12 piezas","precio":120.000},
+  {"id":5,"nombre":"Smart TV","descripcion":"Televisor 55\" 4K HDR","precio":800.000},
+  {"id":6,"nombre":"Auriculares","descripcion":"Auriculares inalámbricos con cancelación de ruido","precio":35.000}
 ]
