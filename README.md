@@ -1,7 +1,9 @@
-# ProyectoFinal+Apellido - Simulador de Regalos
+# Proyecto Final + Martinez, Elio Flavio - Curso de JavaScript 
+
+GiftApp - Coordinador de Regalos para Fiestas o Eventos
 
 ## Descripción
-Este proyecto es un **simulador de regalos** estilo mini-ecommerce.  
+Este proyecto es un **coordinador de regalos** estilo mini-ecommerce.  
 Un usuario ingresa con su apodo, ve una lista de regalos (con descripción y precios en pesos), y puede elegir cuál comprar o si quiere aportar la mitad.  
 Las elecciones quedan guardadas en `localStorage` y se pueden borrar.
 
