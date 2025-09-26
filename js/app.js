@@ -25,7 +25,7 @@ Swal.fire({
 
 // --- Función: cargar productos desde JSON ---
 function cargarProductos() {
-  fetch("regalos.json")
+  fetch("./js/regalos.json")
     .then(res => res.json())
     .then(data => {
       const contenedor = document.getElementById("productos");
