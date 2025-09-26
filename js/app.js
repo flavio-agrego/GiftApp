@@ -1,4 +1,4 @@
-// --- Variables principales ---
+// Variables principales
 let usuario = "";
 let elecciones = [];
 
@@ -7,7 +7,7 @@ if (localStorage.getItem("elecciones")) {
   elecciones = JSON.parse(localStorage.getItem("elecciones"));
 }
 
-// --- Pedir apodo con SweetAlert2 ---
+// Pedir apodo con SweetAlert2
 Swal.fire({
   title: "Bienvenido 🎉",
   text: "Ingresá tu apodo para continuar:",
@@ -18,7 +18,7 @@ Swal.fire({
 }).then((result) => {
   if (result.value) {
     usuario = result.value;
-    document.getElementById("usuario-logueado").textContent = `Hola, ${usuario}!`;
+    document.getElementById("usuario-logueado").textContent = `¡Hola, ${usuario}!`;
 
     // Mostrar secciones
     document.getElementById("usuario-section").classList.remove("hidden");
@@ -30,7 +30,7 @@ Swal.fire({
   }
 });
 
-// --- Función: cargar productos desde JSON ---
+// Función: Cargar productos desde JSON
 function cargarProductos() {
   fetch("./js/regalos.json")
     .then(res => {
@@ -61,7 +61,7 @@ function cargarProductos() {
     });
 }
 
-// --- Función: elegir regalo ---
+// Función: Elegir regalo
 function elegirRegalo(id, nombre) {
   Swal.fire({
     title: `¿Cómo querés aportar para "${nombre}"?`,
@@ -82,7 +82,7 @@ function elegirRegalo(id, nombre) {
   });
 }
 
-// --- Función: mostrar elecciones ---
+// Función: Mostrar elecciones
 function mostrarElecciones() {
   const lista = document.getElementById("lista-elecciones");
   lista.innerHTML = "";
@@ -101,7 +101,7 @@ function mostrarElecciones() {
   });
 }
 
-// Función: borrar elección ---
+// Función: Borrar elección
 function borrarEleccion(index) {
   elecciones.splice(index,1);
   localStorage.setItem("elecciones", JSON.stringify(elecciones));
