@@ -1,79 +1,119 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
 body {
-	font-family:'Inter',sans-serif;
-	margin:0;
-	background:#f9f9f9;
-	color:#333;
+  background-color: #f5f5f5;
+  color: #333;
 }
-main {
-	max-witdh:1200px;
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
 }
+
 header {
-	background:#6c5ce7;
-	color:white;
-	padding:1.5rem;
-	text-align:center;
+  text-align: center;
+  margin-bottom: 20px;
 }
-h1 {
-	margin:0;
+
+header h1 {
+  font-size: 2rem;
+  color: #5e4bff;
 }
-.grid {
-	display:grid;
-	grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-	gap:1.5rem;
-	padding:2rem;
+
+header p.lead {
+  font-size: 1rem;
+  color: #666;
 }
+
 .card {
-	background:white;
-	padding:1rem;
-	border-radius:12px;
-	box-shadow:0 4px 10px rgba(0,0,0,0.05);
-	display:flex;
-	flex-direction:column;
-	justify-content:space-between;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
+
+.hidden {
+  display: none !important;
+}
+
+#usuario-logueado {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #5e4bff;
+}
+
+/* Grid productos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card div.card {
+  padding: 10px;
+}
+
 .card h3 {
-	margin:0 0 0.5rem 0;
-	font-size:1.2rem;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
 }
+
 .card p {
-	font-size:0.9rem;
-	color:#555;
-	margin:0.3rem 0;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
 }
-.precio {
-	font-weight:bold;
-	margin:0.5rem 0;
+
+.card p.precio {
+  font-weight: bold;
+  color: #5e4bff;
+  margin-bottom: 10px;
 }
-button {
-	background:#6c5ce7;
-	color:white;
-	border:none;
-	padding:0.7rem;
-	border-radius:8px;
-	cursor:pointer;
-	font-size:0.9rem;
+
+.card button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5e4bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-button:hover {
-	background:#574bdb;
+
+.card button:hover {
+  background-color: #4733d6;
 }
-#lista-elecciones {
-	list-style:none;
-	padding:1rem 2rem;
+
+.list {
+  list-style: none;
 }
-#lista-elecciones li {
-	background:white;
-	margin:0.5rem 0;
-	padding:0.7rem;
-	border-radius:8px;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
 }
+
 .borrar {
-	background:#d63031;
-	padding:0.4rem 0.7rem;
-	border-radius:6px;
+  background: transparent;
+  border: none;
+  color: #ff5e5e;
+  cursor: pointer;
+  font-size: 1rem;
 }
-.borrar:hover {
-	background: #c0392b;
+
+footer.foot {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 20px;
 }
