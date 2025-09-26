@@ -1,120 +1,100 @@
 /* Reset básico */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+	font-family:'Segoe UI',sans-serif;
 }
-
 body {
-  background-color: #f5f5f5;
-  color: #333;
+	background-color:#f5f5f5;
+	color:#333;
 }
-
 .container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 20px;
-  text-align: center;
+	max-width:900px;
+	margin:20px auto;
+	padding:0 20px;
+	text-align:center;
 }
-
 header {
-  text-align: center;
-  margin-bottom: 20px;
+	text-align:center;
+	margin-bottom:20px;
 }
-
 header h1 {
-  font-size: 2rem;
-  color: #5e4bff;
+	font-size:2rem;
+	color:#E3BEBC;
 }
-
 header p.lead {
-  font-size: 1rem;
-  color: #666;
+	font-size:1rem;
+	color:#666;
 }
-
 .card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+	background:#fff;
+	border-radius:8px;
+	padding:15px;
+	margin-bottom:20px;
+	box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
-
 .hidden {
-  display: none !important;
+	display:none !important;
 }
-
 #usuario-logueado {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: #5e4bff;
+	font-weight:bold;
+	font-size:1.2rem;
+	color:#E3BEBC;
 }
-
-/* Grid productos */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+	gap:15px;
 }
-
 .card div.card {
-  padding: 10px;
+	padding:10px;
 }
-
 .card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+	font-size:1.1rem;
+	margin-bottom:5px;
 }
-
 .card p {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
+	font-size:0.9rem;
+	margin-bottom:5px;
 }
-
 .card p.precio {
-  font-weight: bold;
-  color: #5e4bff;
-  margin-bottom: 10px;
+	font-weight:bold;
+	color:#E3BEBC;
+	margin-bottom:10px;
 }
-
 .card button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #5e4bff;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
+	padding:8px 12px;
+	border:none;
+	border-radius:5px;
+	background-color:#E3BEBC;
+	color:#fff;
+	cursor:pointer;
+	transition:background 0.3s;
 }
-
 .card button:hover {
-  background-color: #4733d6;
+	background-color:#4733d6;
 }
-
 .list {
-  list-style: none;
+	list-style:none;
 }
-
 .list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:6px 0;
+	border-bottom:1px solid #eee;
 }
-
 .borrar {
-  background: transparent;
-  border: none;
-  color: #ff5e5e;
-  cursor: pointer;
-  font-size: 1rem;
+	background:transparent;
+	border:none;
+	color:#ff5e5e;
+	cursor:pointer;
+	font-size:1rem;
 }
-
 footer.foot {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #999;
-  margin-top: 20px;
+	text-align:center;
+	font-size:0.8rem;
+	color:#999;
+	margin-top: 20px;
 }
