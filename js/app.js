@@ -7,23 +7,14 @@ if (localStorage.getItem("elecciones")) {
   elecciones = JSON.parse(localStorage.getItem("elecciones"));
 }
 
-// --- Lista de productos ---
-const productos = [
-  {id:1, nombre:"Viaje a Disney", descripcion:"Un viaje completo a Disney con entrada y alojamiento", precio:500000},
-  {id:2, nombre:"Heladera", descripcion:"Heladera con freezer y eficiencia energética", precio:150000},
-  {id:3, nombre:"Microondas", descripcion:"Microondas con grill y varias funciones", precio:25000},
-  {id:4, nombre:"Vajilla", descripcion:"Juego de vajilla de 12 piezas", precio:12000},
-  {id:5, nombre:"Smart TV", descripcion:"Televisor 55\" 4K HDR", precio:200000},
-  {id:6, nombre:"Auriculares", descripcion:"Auriculares inalámbricos con cancelación de ruido", precio:35000}
-];
-
 // --- Pedir apodo con SweetAlert2 ---
 Swal.fire({
   title: "Bienvenido 🎉",
   text: "Ingresá tu apodo para continuar:",
   input: "text",
   inputPlaceholder: "Tu apodo",
-  confirmButtonText: "Entrar"
+  confirmButtonText: "Entrar",
+  allowOutsideClick: false
 }).then((result) => {
   if (result.value) {
     usuario = result.value;
@@ -34,29 +25,40 @@ Swal.fire({
     document.getElementById("regalos-section").classList.remove("hidden");
     document.getElementById("historial-section").classList.remove("hidden");
 
-    cargarProductos();
+    cargarProductos(); // Carga desde JSON
     mostrarElecciones();
   }
 });
 
-// --- Función: cargar productos ---
+// --- Función: cargar productos desde JSON ---
 function cargarProductos() {
-  const contenedor = document.getElementById("productos");
-  contenedor.innerHTML = "";
+  fetch("./js/regalos.json")
+    .then(res => {
+      if (!res.ok) throw new Error("No se pudo cargar JSON");
+      return res.json();
+    })
+    .then(data => {
+      const contenedor = document.getElementById("productos");
+      contenedor.innerHTML = "";
 
-  productos.forEach(producto => {
-    const card = document.createElement("div");
-    card.classList.add("card");
+      data.forEach(producto => {
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-    card.innerHTML = `
-      <h3>${producto.nombre}</h3>
-      <p>${producto.descripcion}</p>
-      <p class="precio">$${producto.precio.toLocaleString("es-AR")}</p>
-      <button onclick="elegirRegalo(${producto.id}, '${producto.nombre}')">Elegir regalo</button>
-    `;
+        card.innerHTML = `
+          <h3>${producto.nombre}</h3>
+          <p>${producto.descripcion}</p>
+          <p class="precio">$${producto.precio.toLocaleString("es-AR")}</p>
+          <button onclick="elegirRegalo(${producto.id}, '${producto.nombre}')">Elegir regalo</button>
+        `;
 
-    contenedor.appendChild(card);
-  });
+        contenedor.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("Error cargando regalos.json:", err);
+      Swal.fire("Error", "No se pudieron cargar los regalos.", "error");
+    });
 }
 
 // --- Función: elegir regalo ---
@@ -99,7 +101,7 @@ function mostrarElecciones() {
   });
 }
 
-// --- Función: borrar elección ---
+// Función: borrar elección ---
 function borrarEleccion(index) {
   elecciones.splice(index,1);
   localStorage.setItem("elecciones", JSON.stringify(elecciones));
