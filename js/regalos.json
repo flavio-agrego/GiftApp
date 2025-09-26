@@ -1,0 +1,9 @@
+[
+  {"id":1,"nombre":"Televisor 55\"","descripcion":"Televisor 4K UHD con HDR","precio":250000},
+  {"id":2,"nombre":"Notebook","descripcion":"Notebook Core i5, 8GB RAM","precio":480000},
+  {"id":3,"nombre":"Celular","descripcion":"Smartphone 128GB, cámara triple","precio":300000},
+  {"id":4,"nombre":"Viaje a Disney","descripcion":"Paquete 7 noches en Orlando","precio":1500000},
+  {"id":5,"nombre":"Heladera","descripcion":"Heladera no frost con freezer","precio":450000},
+  {"id":6,"nombre":"Microondas","descripcion":"Microondas digital 20L","precio":90000},
+  {"id":7,"nombre":"Vajilla","descripcion":"Set de vajilla de 16 piezas","precio":60000}
+]
