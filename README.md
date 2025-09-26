@@ -1,4 +1,4 @@
-# Proyecto Final + Martinez, Elio Flavio - Curso de JavaScript - CoderHouse
+# Proyecto Final + Martinez, Elio Flavio + Curso de JavaScript + CoderHouse
 
 GiftApp - Coordinador de Regalos para Fiestas o Eventos
 
